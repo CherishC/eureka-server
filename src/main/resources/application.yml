@@ -1,0 +1,16 @@
+server:
+    port: 8761
+
+eureka:
+  instance:
+    hostname: 119.23.30.142
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enableSelfPreservation: false
+spring:
+  application:
+    name: eureka-server
